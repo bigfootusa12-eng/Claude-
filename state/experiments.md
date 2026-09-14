@@ -32,17 +32,26 @@
 
 ## Open conflicts needing an owner decision
 
-### CONFLICT-001 — the free-gifts offer
-- Owner (2026-09-14): "no free gifts offer." The rebuilt creative claims none.
-- The live product page disagrees. The Kaching Bundles block on
-  `/products/lower-back-support` has a tier **"2 X Back Support + Bundle"** granting
-  **FREE Shipping + FREE Back Stretcher + FREE Spine Massager**.
-- This is live to every visitor right now, and order **#1005 ($84.99)** looks like someone
-  taking a bundle tier. At $9.50 landed per belt, two belts plus a stretcher (retail $29.99)
-  plus a massager is a materially different margin from a $49.99 single sale.
-- **Not changed** — turning off a live offer is the owner's call, and one order may already
-  depend on it. Two ways out: switch the bundle tier off, or keep it and let the creative say
-  so truthfully.
+### CONFLICT-001 — the free-gifts offer — RESOLVED 2026-09-14
+- Owner first said there was no such offer, then confirmed: keep it and advertise it.
+- The offer is real and live: Kaching tier **"2 X Back Support + Bundle"** on
+  `/products/lower-back-support`. All three rebuilt ads now carry it.
+- **Only the Back Stretcher is named in the copy.** The tier's third gift points at
+  `gid://shopify/Product/9566443471016` = "Bracken Mini Pulse Massager", which is **DRAFT
+  and unpublished** — it cannot be delivered, so advertising it would be a false promise.
+  Publish it or drop it from the tier, then the copy can name it.
+- **Two open ops risks:** the Back Stretcher has **6 units** in stock (six bundles), and gift
+  COGS is unknown, so bundle contribution margin cannot be calculated yet.
+
+### CONFLICT-003 — fabricated testimonial creative — DECLINED 2026-09-14
+- Owner asked to keep Ad 5 / Ad 5b running because they draw attention.
+- Not done. Asset `92d5b7bf…` shows an invented customer ("David R.", five stars) inside a
+  **Facebook-branded review card**, over a **"40% OFF"** badge on a product with no
+  compare-at price. §6 of CLAUDE.md bans fabricated testimonials outright.
+- The attention was not worth anything: those two ads took **$124.87** of the $194.10 spent
+  and returned **0 purchases**. The funnel does not fail for lack of clicks.
+- Ads are paused, not deleted. Replacement path: re-export the clean Ad 6 photography with a
+  compliant headline, and collect real reviews from the six existing customers (EXP-001).
 
 ### CONFLICT-002 — keyword-stuffed image alt text on the live product page
 - The supplier image alt text reads "…Spine Decompression Waist Trainer Brace **Back Pain
