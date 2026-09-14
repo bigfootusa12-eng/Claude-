@@ -3,18 +3,18 @@
 
 economics:
   price: 49.99
-  product_cogs: 12.00          # UNCONFIRMED — placeholder from CLAUDE.md default. Needs true landed cost.
-  shipping_cost: 0.00          # UNCONFIRMED — "free tracked shipping" cost is borne by us, not yet quantified.
+  product_cogs: 9.50           # CONFIRMED landed cost (owner, 2026-09-14).
+  shipping_cost: 0.00          # Treated as included in the $9.50 landed figure.
   payment_fee_pct: 2.9
   payment_fee_flat: 0.30
   est_refund_rate: 0.00        # 1 of 6 lifetime orders refunded (#1001) — too little data to set.
-  # Derived at current placeholders: contribution margin = 49.99 - 12.00 - 1.75 = 36.24
-  # Implied break-even ROAS = 49.99 / 36.24 = 1.38  (using 1.60 until COGS is confirmed)
+  # contribution margin = 49.99 - 9.50 - (49.99*0.029 + 0.30) = 38.74
 
 targets:
-  break_even_roas: 1.6
+  break_even_roas: 1.29        # price / contribution margin = 49.99 / 38.74
   target_roas: 2.2
-  break_even_cpa: 31.24        # price / break_even_roas
+  break_even_cpa: 38.74        # = contribution margin per order
+  # At target_roas 2.2 the allowable CPA is 49.99 / 2.2 = 22.72
 
 spend:
   daily_ad_spend_cap: 100.00
