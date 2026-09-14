@@ -1,0 +1,38 @@
+# Bracken — operating thresholds. Tune here, not in CLAUDE.md.
+# Last reviewed: 2026-09-14
+
+economics:
+  price: 49.99
+  product_cogs: 12.00          # UNCONFIRMED — placeholder from CLAUDE.md default. Needs true landed cost.
+  shipping_cost: 0.00          # UNCONFIRMED — "free tracked shipping" cost is borne by us, not yet quantified.
+  payment_fee_pct: 2.9
+  payment_fee_flat: 0.30
+  est_refund_rate: 0.00        # 1 of 6 lifetime orders refunded (#1001) — too little data to set.
+  # Derived at current placeholders: contribution margin = 49.99 - 12.00 - 1.75 = 36.24
+  # Implied break-even ROAS = 49.99 / 36.24 = 1.38  (using 1.60 until COGS is confirmed)
+
+targets:
+  break_even_roas: 1.6
+  target_roas: 2.2
+  break_even_cpa: 31.24        # price / break_even_roas
+
+spend:
+  daily_ad_spend_cap: 100.00
+  max_daily_budget_increase: 20   # percent, per adset
+  new_campaign_test_budget: 20.00
+  min_data_before_action: 20.00
+
+kill_rules:
+  min_impressions: 1000
+  min_spend: 20.00
+  min_days: 2
+  kill_ad_cpa_multiple: 1.5     # kill if CPA > 1.5x break-even CPA AND ROAS < 1.0
+  kill_adset_roas_3d: 0.8
+  fatigue_frequency_7d: 2.5
+  fatigue_ctr_drop_pct: 30
+
+accounts:
+  shopify_shop: bys-user-store-323235-yhxvqb16.myshopify.com
+  shopify_domain: trybraken.com
+  meta_ad_account: act_2101525860767389
+  meta_page_id: "1250952151436577"    # Try bracken health

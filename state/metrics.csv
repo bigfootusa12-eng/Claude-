@@ -1,0 +1,2 @@
+date_range,spend,revenue,orders,sessions,cvr,aov,blended_roas,blended_cpa,contribution_margin,refund_rate,notes
+2026-08-24..2026-09-13,194.10,134.98,2,303,0.0066,67.49,0.70,97.05,-99.62,0.00,"Baseline. Campaign #1 live window. Meta-attributed purchases: 0. Pixel: 144 clicks -> 98 ViewContent -> 1 ATC -> 0 Purchase."

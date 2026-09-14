@@ -1,0 +1,8 @@
+[2026-09-14] SETUP | Verified Shopify + Meta access | none->connected | Shopify: Bracken / trybraken.com / Basic / USD. Meta: act_2101525860767389 via Supermetrics FA.
+[2026-09-14] SETUP | Created config.yml, state/metrics.csv, state/actions.log, state/experiments.md, state/backups/ | absent->created | CLAUDE.md section 1 requirement.
+[2026-09-14] META | Paused Campaign #1 (120249595594670497) | ENABLED->PAUSED | Kill rule hit at adset level: $194.10 spend / 30d, 0 attributed purchases, ROAS 0.00 vs break-even 1.6. Bleed is ~$20-30/day into a funnel that does not convert. Fully reversible.
+[2026-09-14] META | Paused Ad 5 (120249595653340497) | ACTIVE->PAUSED | Kill rule ($67.33 spend, 0 purchases) AND compliance: copy claims "(4.8)" 5-star rating while Judge.me widget reports data-shop-review-count="0"; also claims "90-day guarantee" vs the 60-day guarantee stated on site and product page.
+[2026-09-14] META | Attempted rewrite of Ad 5 copy to remove fabricated 4.8 rating and correct 90-day->60-day | REFUSED BY META | Graph API error 100/1885852 "Creative is missing DynamicCreativeAttachment" — dynamic-creative ads cannot be edited in place. Must be rebuilt as a new ad. Ad left paused so the false claims cannot serve.
+[2026-09-14] META | Paused Ad 5b (120249665946230497) | ACTIVE->PAUSED | Kill rule: $57.54 spend, 0 purchases, ROAS 0.00.
+[2026-09-14] META | Paused Ad 6 (120249595653350497) | ACTIVE->PAUSED | Kill rule: $64.90 spend, 0 purchases, ROAS 0.00.
+[2026-09-14] AUDIT | Live theme identified | n/a | gid://shopify/OnlineStoreTheme/155851915432 "Bracken - homepage fix (draft)" role=MAIN. Shopify MCP blocks theme file writes to the MAIN theme, so no theme edits were attempted this session.
