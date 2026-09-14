@@ -1,0 +1,5 @@
+{
+  "captured_at": "2026-09-14",
+  "live_theme": { "id": "gid://shopify/OnlineStoreTheme/155851915432", "name": "Bracken — homepage fix (draft)", "role": "MAIN", "themeStoreId": null },
+  "note": "No theme edits made. Shopify MCP blocks themeFilesUpsert/themeFilesCopy against the MAIN (live) theme."
+}

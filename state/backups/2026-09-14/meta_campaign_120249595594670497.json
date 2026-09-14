@@ -1,0 +1,41 @@
+{
+  "captured_at": "2026-09-14",
+  "note": "State captured BEFORE this session's pauses. Restore by setting these statuses back.",
+  "account_id": "act_2101525860767389",
+  "campaign": {
+    "campaign_id": "120249595594670497",
+    "name": "Campaign #1",
+    "status_before": "ENABLED",
+    "status_after": "PAUSED",
+    "budget_amount": 10,
+    "budget_type": "DAILY",
+    "start_date": "2026-08-24",
+    "bidding_strategy": "LOWEST_COST_WITHOUT_CAP",
+    "objective": "OUTCOME_SALES",
+    "buying_type": "AUCTION"
+  },
+  "ad_set": {
+    "ad_group_id": "120249595594660497",
+    "name": "New Sales Ad Set",
+    "status": "ENABLED",
+    "optimization_goal": "OFFSITE_CONVERSIONS",
+    "billing_event": "IMPRESSIONS",
+    "targeting": { "locations": ["US"], "age_min": 18, "advantage_audience": true }
+  },
+  "ads": [
+    { "id": "120249595653340497", "name": "Ad 5",  "status_before": "ACTIVE", "status_after": "PAUSED", "spend_30d": 67.33, "purchases": 0,
+      "creative": {
+        "headlines": ["Feel Supported All Day"],
+        "descriptions": ["Sitting, standing, lifting, or commuting—your day asks a lot from your lower back. Our lumbar belt is designed to fit comfortably under clothing while providing adjustable support wherever the day takes you.\n\n👉 Buy 2, Get Free Gifts backed by our 90-day guarantee."],
+        "link_descriptions": ["⭐⭐⭐⭐⭐(4.8)"],
+        "final_urls": ["https://trybraken.com/products/lower-back-support"]
+      },
+      "flags": ["fabricated 4.8 star rating (site has 0 reviews)", "90-day guarantee contradicts site's 60-day", "'Buy 2, Get Free Gifts' offer not verified on site"] },
+    { "id": "120249665946230497", "name": "Ad 5b", "status_before": "ACTIVE", "status_after": "PAUSED", "spend_30d": 57.54, "purchases": 0, "creative": { "asset_id": "92d5b7bfc3a0d4d257159f68e67764dd" } },
+    { "id": "120249595653350497", "name": "Ad 6",  "status_before": "ACTIVE", "status_after": "PAUSED", "spend_30d": 64.90, "purchases": 0, "creative": { "asset_id": "52b08e933fcf8ab9926ee3c8ee122c32" } },
+    { "id": "120249595594650497", "name": "Ad 1",  "status_before": "PAUSED", "status_after": "PAUSED", "spend_30d": 1.29, "creative": { "asset_id": "225b4668684f46ec31e6f603597a179a" } },
+    { "id": "120249595653310497", "name": "Ad 2",  "status_before": "PAUSED", "status_after": "PAUSED", "spend_30d": 1.25, "creative": { "asset_id": "7864279149106a791a495a7473270132" } },
+    { "id": "120249595653320497", "name": "Ad 3",  "status_before": "PAUSED", "status_after": "PAUSED", "spend_30d": 0.80, "creative": { "asset_id": "7e78ac07cad620da278ff6b2c36da937" } },
+    { "id": "120249595653330497", "name": "Ad 4",  "status_before": "PAUSED", "status_after": "PAUSED", "spend_30d": 0.99, "creative": { "asset_id": "bf46985ed241b6f2bb1935912dd3a492" } }
+  ]
+}
