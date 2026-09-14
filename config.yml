@@ -5,15 +5,16 @@ economics:
   price: 49.99
   product_cogs: 9.50           # CONFIRMED landed cost (owner, 2026-09-14).
   shipping_cost: 0.00          # Treated as included in the $9.50 landed figure.
-  payment_fee_pct: 2.9
+  payment_fee_pct: 2.9          # estimate; the one real order was charged $2.23 on $49.99
   payment_fee_flat: 0.30
+  actual_fee_observed: 2.23     # order #1007: $49.99 captured, $47.76 to payout
   est_refund_rate: 0.00        # 1 of 6 lifetime orders refunded (#1001) — too little data to set.
-  # contribution margin = 49.99 - 9.50 - (49.99*0.029 + 0.30) = 38.74
+  # contribution margin = 49.99 - 9.50 - 2.23 = 38.26  (measured on order #1007)
 
 targets:
-  break_even_roas: 1.29        # price / contribution margin = 49.99 / 38.74
+  break_even_roas: 1.31        # price / contribution margin = 49.99 / 38.26
   target_roas: 2.2
-  break_even_cpa: 38.74        # = contribution margin per order
+  break_even_cpa: 38.26        # = contribution margin per order
   # At target_roas 2.2 the allowable CPA is 49.99 / 2.2 = 22.72
 
 spend:
