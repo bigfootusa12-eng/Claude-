@@ -11,10 +11,23 @@
 - **Status:** BLOCKED. Judge.me is installed and reporting `data-shop-review-count="0"`. We have 6 lifetime orders, 1 refunded. Reviews must be solicited from those real customers — they will not be fabricated.
 - **Judge on:** ATC rate per session (baseline 1 ATC / 98 landing-page views = ~1%).
 
-### EXP-002 — Landing-page LCP / above-the-fold
-- **Hypothesis:** Page is 301 KB of HTML with 15 `loading="lazy"` images and 0 `loading="eager"`. If the hero image is lazy-loaded, mobile paid traffic sees a blank hero first — a known ATC killer.
-- **Status:** BLOCKED on write access. Shopify MCP refuses theme file writes to the MAIN theme.
-- **Judge on:** LCP, and ATC rate per session.
+### EXP-002 — Landing-page LCP / above-the-fold — CLOSED, NOT A REAL ISSUE
+- I claimed the hero was lazy-loaded. **That was wrong.** I had counted `loading="lazy"`
+  occurrences without checking which images carried them. The hero carries no loading
+  attribute and loads eagerly; only the below-fold gallery is lazy, which is correct.
+- Weight is fine too — the CDN serves **318 KB of webp** to browsers that accept it. The
+  5.1 MB PNG only reaches clients that don't request webp.
+- No theme edit is needed. Closed.
+
+### EXP-004 — Compliant hero image *(shipped 2026-09-14)*
+- **What was wrong:** the product page's featured image was `Ad_6.png` — the retired ad
+  creative whose baked-in headline reads "Back Pain Doesn't Take a Day Off." Affliction
+  framing under §3, serving as both the hero and the `og:image` on every shared link.
+- **Change:** reordered product media so the worn-product shot leads, cutaway second, size
+  chart third, `Ad_6.png` last. Three alt texts rewritten, removing the supplier's
+  "…Back Pain Relief" keyword spam.
+- **Judge on:** ATC rate per session against the 1-in-98 baseline, once traffic resumes.
+- **Revert:** move `MediaImage/41352348696744` back to position 0.
 
 ### EXP-003 — Rebuild ad creative without the false claims
 - **Status:** BUILT, PAUSED, awaiting launch. Ad set `Clean Creative Test - Sep 2026`
@@ -53,10 +66,15 @@
 - Ads are paused, not deleted. Replacement path: re-export the clean Ad 6 photography with a
   compliant headline, and collect real reviews from the six existing customers (EXP-001).
 
-### CONFLICT-002 — keyword-stuffed image alt text on the live product page
-- The supplier image alt text reads "…Spine Decompression Waist Trainer Brace **Back Pain
-  Relief**". That is a health claim sitting on the landing page ads point at.
-- Not changed: theme/product media writes to the live theme are blocked for this session.
+### CONFLICT-002 — keyword-stuffed image alt text — RESOLVED 2026-09-14
+- Rewritten via `fileUpdate`, which is not blocked (only *theme file* writes to the live theme
+  are). The "…Back Pain Relief" alt is gone; all three images now carry factual descriptions.
+
+### CONFLICT-004 — Ad_6.png still sits in the product gallery
+- Its health claim is baked into the image pixels, so demoting it to last limits exposure but
+  does not remove it. Deleting a brand asset is the owner's call.
+- **Options:** delete the media, or re-export the artwork with a compliant headline. The
+  photography and brand lockup are genuinely good — only the copy on it is the problem.
 
 ---
 
